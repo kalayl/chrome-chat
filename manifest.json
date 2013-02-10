@@ -1,0 +1,35 @@
+{
+    "manifest_version": 2,
+
+    "name": "chrome-chat",
+    "description": "chrome-chat",
+    "version": "1.0",
+
+    "browser_action": {
+        "default_icon": "images/icon.png",
+        "default_popup": "popup.html"
+    },
+
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*",
+                "file://*/*"
+            ],
+
+            "css": [
+                "css/jquery-ui-1.10.0.custom.css",
+                "css/style.css"
+            ],
+
+            "js": [
+                "js/jquery-1.9.1.js",
+                "js/jquery-ui-1.10.0.custom.js",
+                "contentscript.js"
+            ],
+
+            "all_frames": false
+        }
+    ]
+}
